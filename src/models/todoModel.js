@@ -17,9 +17,9 @@ const todoSchema = new mongoose.Schema(
       default: false,
     },
   },
-  { collection: "Todo", timestamps: true }
+  { collection: "TaskTracker", timestamps: true }
 );
 
-const todo = mongoose.model("Todo", todoSchema);
+const todo = mongoose.model("TaskTracker", todoSchema);
 
 module.exports = todo;

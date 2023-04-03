@@ -4,7 +4,7 @@ const addTodo = async (req, res) => {
   // console.log(req.body);
   try {
     const isSameTodo = await todo.findOne({ name: req.body.name });
-    console.log("isSame", isSameTodo);
+    // console.log("isSame", isSameTodo);
     if (isSameTodo) {
       return res.status(400).json({
         success: false,

@@ -14,5 +14,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server ${port}, Portundan Başlatıldı`);
+  // console.log(`Server ${port}, PortundaSn Başlatıldı`);
 });

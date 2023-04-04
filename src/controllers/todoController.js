@@ -3,7 +3,7 @@ const todo = require("../models/todoModel");
 const addTodo = async (req, res) => {
   // console.log(req.body);
   try {
-    const isSameTodo = await todo.findOne({ name: req.body.name });
+    const isSameTodo = await todo.findOne({ task: req.body.task });
     // console.log("isSame", isSameTodo);
     if (isSameTodo) {
       return res.status(400).json({
@@ -36,10 +36,7 @@ const addTodo = async (req, res) => {
 const getTodo = async (req, res) => {
   try {
     const allTodo = await todo.find({});
-    return res.status(201).json({
-      success: true,
-      data: allTodo,
-    });
+    return res.status(201).json(allTodo);
   } catch (error) {
     return res.status(500).json({
       success: false,
